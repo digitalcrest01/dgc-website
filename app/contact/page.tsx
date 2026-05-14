@@ -22,9 +22,19 @@ export default function ContactPage() {
           </p>
 
           <ul className="mt-8 space-y-4">
-            <Item icon={Mail} label="Email">
-              <a className="link-underline" href="mailto:hello@digitalcrest.co.uk">
-                hello@digitalcrest.co.uk
+            <Item icon={Mail} label="Enquiries">
+              <a className="link-underline" href="mailto:enquiries@digitalcrest.co.uk">
+                enquiries@digitalcrest.co.uk
+              </a>
+            </Item>
+            <Item icon={Mail} label="General info">
+              <a className="link-underline" href="mailto:info@digitalcrest.co.uk">
+                info@digitalcrest.co.uk
+              </a>
+            </Item>
+            <Item icon={Mail} label="Legal and privacy">
+              <a className="link-underline" href="mailto:legal@digitalcrest.co.uk">
+                legal@digitalcrest.co.uk
               </a>
             </Item>
             <Item icon={MapPin} label="Location">

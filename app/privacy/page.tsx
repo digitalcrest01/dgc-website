@@ -55,8 +55,8 @@ export default function PrivacyPage() {
         <p>
           You can request a copy of your data, ask for corrections, request deletion, or object to
           processing. Email{' '}
-          <a className="link-underline" href="mailto:privacy@digitalcrest.co.uk">
-            privacy@digitalcrest.co.uk
+          <a className="link-underline" href="mailto:legal@digitalcrest.co.uk">
+            legal@digitalcrest.co.uk
           </a>
           . You can also complain to the ICO at ico.org.uk.
         </p>

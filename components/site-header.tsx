@@ -10,7 +10,7 @@ const primaryNav = [
   { href: '/services', label: 'Services' },
   { href: '/approach', label: 'Approach' },
   { href: '/about', label: 'About' },
-  { href: '/insights', label: 'Insights' },
+  { href: '/research', label: 'Research Lab' },
 ];
 
 export function SiteHeader() {

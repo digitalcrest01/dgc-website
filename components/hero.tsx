@@ -15,17 +15,18 @@ export function Hero() {
 
       <div className="container-page relative">
         <div className="flex flex-col items-start gap-6">
-          <div className="eyebrow eyebrow-dot">UK cyber security consultancy</div>
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="eyebrow eyebrow-dot">UK cyber security consultancy</div>
+            <span className="hidden h-3 w-px bg-navy/15 sm:inline-block" />
+            <SystemBadge />
+          </div>
 
           <h1 className="max-w-4xl font-display text-[34px] font-semibold leading-[1.05] tracking-tightest text-balance text-navy sm:text-5xl lg:text-[56px]">
-            Security that lets your engineers ship.
-            <br className="hidden sm:block" />
-            <span className="text-navy/55">Assurance your board can read.</span>
+            Engineered security for the teams shipping critical software.
           </h1>
-
           <p className="max-w-xl text-base leading-relaxed text-navy/75">
             Application security, GRC and audit, security engineering, and cloud architecture.
-            Senior practitioners, fixed scope, measurable outcomes.
+            Senior practitioners. Built into your pipeline, measured against your business.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -47,9 +48,21 @@ export function Hero() {
   );
 }
 
+function SystemBadge() {
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-cream-50 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-navy/65">
+      <span className="relative flex h-1.5 w-1.5">
+        <span className="absolute inline-flex h-full w-full animate-pulse-soft rounded-full bg-gold" />
+        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
+      </span>
+      operational · est. 2019
+    </span>
+  );
+}
+
 function HeroStats() {
   const stats = [
-    { value: '15+ yrs', label: 'Regulated software' },
+    { value: 'Est. 2019', label: 'Founded' },
     { value: '4', label: 'Disciplines' },
     { value: 'AWS · Azure · GCP', label: 'Cloud platforms' },
     { value: 'ISO · SOC · NIST', label: 'Frameworks' },
@@ -76,19 +89,24 @@ function HeroTerminal() {
       <div className="absolute -inset-x-10 -inset-y-8 -z-10 rounded-3xl bg-gradient-to-br from-gold/20 via-transparent to-navy/10 blur-3xl" />
       <div className="overflow-hidden rounded-2xl border border-navy/15 bg-navy text-cream-100 shadow-2xl shadow-navy/20">
         <div className="flex items-center justify-between border-b border-cream-100/10 px-4 py-2.5">
-          <div className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-cream-100/20" />
-            <span className="h-2 w-2 rounded-full bg-cream-100/20" />
-            <span className="h-2 w-2 rounded-full bg-gold/80" />
+          <div className="flex items-center gap-2">
+            <span className="flex items-center gap-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-cream-100/25" />
+              <span className="h-1.5 w-1.5 rounded-full bg-cream-100/25" />
+              <span className="h-1.5 w-1.5 rounded-full bg-gold/80" />
+            </span>
+            <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.2em] text-cream-100/50">
+              dgc.engagement
+            </span>
           </div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream-100/50">
-            dgc · engagement
-          </p>
-          <p className="font-mono text-[10px] text-cream-100/40">v1.0</p>
+          <div className="hidden items-center gap-3 sm:flex">
+            <span className="font-mono text-[10px] text-cream-100/40">build · 1.0.0</span>
+            <span className="font-mono text-[10px] text-cream-100/40">●  gmt</span>
+          </div>
         </div>
         <div className="grid gap-0 lg:grid-cols-2">
           <pre className="overflow-x-auto p-5 font-mono text-[11.5px] leading-relaxed text-cream-100/90 lg:p-6">
-{`$ dgc engage --scope appsec,grc,cloud --duration 12w
+{`$ dgc engage --scope appsec,grc,cloud
 
 > phase 01  discover
   · architecture and code review
@@ -97,11 +115,11 @@ function HeroTerminal() {
 
 > phase 02  design
   · target operating model
-  · controls mapped (ISO + SOC2)
+  · controls mapped (iso + soc2)
   · landing zone blueprint
 
 > phase 03  build
-  · pipeline guardrails as code
+  · guardrails as code
   · detections and identity
   · evidence pipeline live
 
@@ -110,7 +128,7 @@ function HeroTerminal() {
   · board pack and metrics
   · runbooks owned by the team
 
-ready for audit + production`}
+status  ready for audit + production`}
           </pre>
           <div className="relative border-t border-cream-100/10 lg:border-l lg:border-t-0">
             <div
@@ -135,6 +153,21 @@ ready for audit + production`}
               ))}
             </div>
           </div>
+        </div>
+        <div className="grid grid-cols-2 gap-px border-t border-cream-100/10 bg-cream-100/10 sm:grid-cols-4">
+          {[
+            ['Region', 'UK · EU'],
+            ['Stack', 'multi cloud'],
+            ['Method', 'four phase'],
+            ['Standard', 'iso · soc2'],
+          ].map(([k, v]) => (
+            <div key={k} className="bg-navy/95 px-4 py-3">
+              <p className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-cream-100/45">
+                {k}
+              </p>
+              <p className="mt-0.5 font-mono text-[11px] text-cream-100/90">{v}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

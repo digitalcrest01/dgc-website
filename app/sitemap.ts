@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { services } from '@/lib/services';
+import { research } from '@/lib/research';
 
 const SITE = 'https://digitalcrest.co.uk';
 
@@ -10,9 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/approach',
     '/about',
-    '/insights',
+    '/research',
     '/contact',
     '/privacy',
+    '/cookies',
     '/terms',
   ].map((path) => ({
     url: `${SITE}${path}`,
@@ -28,5 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const researchRoutes = research.map((p) => ({
+    url: `${SITE}/research/${p.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...researchRoutes];
 }

@@ -28,12 +28,19 @@ const values = [
 ];
 
 const facts = [
-  { k: 'Founded', v: '2024' },
+  { k: 'Founded', v: '2019' },
   { k: 'HQ', v: 'United Kingdom' },
   { k: 'Model', v: 'Remote first' },
   { k: 'Clients', v: 'Scaleups + regulated' },
   { k: 'Disciplines', v: 'AppSec · GRC · SecEng · Cloud' },
   { k: 'Engagements', v: 'Sprint · Programme · Fractional' },
+];
+
+const timeline = [
+  { year: '2019', event: 'Founded in the UK. Application security and audit practice.' },
+  { year: '2020', event: 'Cloud architecture practice added across AWS, Azure, and GCP.' },
+  { year: '2022', event: 'Security engineering practice. Detection and identity at scale.' },
+  { year: '2024', event: 'Research Lab launched. Reference architectures and playbooks.' },
 ];
 
 export default function AboutPage() {
@@ -45,8 +52,25 @@ export default function AboutPage() {
           A small firm with an outsized standard.
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-navy/70">
-          Senior people on the work, clear deliverables, evidence over storytelling.
+          Founded in 2019. Senior people on the work, clear deliverables, evidence over storytelling.
         </p>
+      </section>
+
+      <section className="container-page mt-16 lg:mt-20">
+        <p className="eyebrow eyebrow-dot">Timeline</p>
+        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
+          Six years, four disciplines, one standard.
+        </h2>
+        <ol className="mt-8 grid gap-px overflow-hidden rounded-xl border border-navy/10 bg-navy/10 sm:grid-cols-2 lg:grid-cols-4">
+          {timeline.map((t) => (
+            <li key={t.year} className="bg-cream-100 p-5">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
+                {t.year}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-navy/80">{t.event}</p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="container-page mt-16 lg:mt-20">

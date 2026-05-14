@@ -24,9 +24,9 @@ export function CTA() {
               Book a discovery call
               <ArrowUpRight className="h-4 w-4" />
             </Link>
-            <a href="mailto:hello@digitalcrest.co.uk" className="btn-ghost w-full justify-center">
+            <a href="mailto:enquiries@digitalcrest.co.uk" className="btn-ghost w-full justify-center">
               <Mail className="h-4 w-4" />
-              hello@digitalcrest.co.uk
+              enquiries@digitalcrest.co.uk
             </a>
             <p className="mt-1 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-navy/45">
               UK · remote first · GMT

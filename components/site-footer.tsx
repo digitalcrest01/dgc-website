@@ -24,12 +24,16 @@ export function SiteFooter() {
             A UK based cyber security consultancy. We secure software, harden cloud platforms, and
             build defensible programmes.
           </p>
+          <p className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80">
+            <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-gold" />
+            est. 2019 · united kingdom
+          </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <a
-              href="mailto:hello@digitalcrest.co.uk"
+              href="mailto:enquiries@digitalcrest.co.uk"
               className="inline-flex items-center gap-1.5 rounded-full border border-cream-100/20 px-3 py-1.5 text-[11px] text-cream-100/90 transition-colors hover:bg-cream-100/10"
             >
-              <Mail className="h-3 w-3" /> hello@digitalcrest.co.uk
+              <Mail className="h-3 w-3" /> enquiries@digitalcrest.co.uk
             </a>
             <a
               href="https://www.linkedin.com/company/digitalcrestconsulting"
@@ -53,7 +57,7 @@ export function SiteFooter() {
         <FooterCol title="Company">
           <FooterLink href="/about">About</FooterLink>
           <FooterLink href="/approach">Approach</FooterLink>
-          <FooterLink href="/insights">Insights</FooterLink>
+          <FooterLink href="/research">Research Lab</FooterLink>
           <FooterLink href="/contact">Contact</FooterLink>
         </FooterCol>
 
@@ -79,6 +83,9 @@ export function SiteFooter() {
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-cream-100">
               Privacy
+            </Link>
+            <Link href="/cookies" className="hover:text-cream-100">
+              Cookies
             </Link>
             <Link href="/terms" className="hover:text-cream-100">
               Terms

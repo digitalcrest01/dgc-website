@@ -28,7 +28,7 @@ export function ContactForm() {
       '',
       String(data.get('message') ?? ''),
     ].join('\n');
-    const href = `mailto:hello@digitalcrest.co.uk?subject=${encodeURIComponent(
+    const href = `mailto:enquiries@digitalcrest.co.uk?cc=info@digitalcrest.co.uk&subject=${encodeURIComponent(
       'New enquiry · ' + (data.get('company') || data.get('name') || 'website'),
     )}&body=${encodeURIComponent(mail)}`;
     window.location.href = href;
@@ -47,8 +47,8 @@ export function ContactForm() {
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-navy/70">
           If it did not launch, drop a note to{' '}
-          <a className="link-underline" href="mailto:hello@digitalcrest.co.uk">
-            hello@digitalcrest.co.uk
+          <a className="link-underline" href="mailto:enquiries@digitalcrest.co.uk">
+            enquiries@digitalcrest.co.uk
           </a>{' '}
           and we will be in touch within one working day.
         </p>
