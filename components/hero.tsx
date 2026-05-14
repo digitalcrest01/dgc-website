@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { HeroPipeline } from './hero-pipeline';
 
 export function Hero() {
   return (
@@ -17,7 +18,7 @@ export function Hero() {
         <div className="flex flex-col items-start gap-6">
           <div className="flex flex-wrap items-center gap-3">
             <div className="eyebrow eyebrow-dot">UK cyber security consultancy</div>
-            <span className="hidden h-3 w-px bg-ink-700/15 sm:inline-block" />
+            <span className="hidden h-3 w-px bg-cream-100/15 sm:inline-block" />
             <SystemBadge />
           </div>
 
@@ -42,7 +43,7 @@ export function Hero() {
           <HeroStats />
         </div>
 
-        <HeroTerminal />
+        <HeroPipeline />
       </div>
     </section>
   );
@@ -80,96 +81,5 @@ function HeroStats() {
         </div>
       ))}
     </dl>
-  );
-}
-
-function HeroTerminal() {
-  return (
-    <div className="relative mx-auto mt-16 max-w-5xl">
-      <div className="absolute -inset-x-10 -inset-y-8 -z-10 rounded-3xl bg-gradient-to-br from-gold/20 via-transparent to-navy/10 blur-3xl" />
-      <div className="overflow-hidden rounded-2xl border border-cream-100/15 bg-ink-700 text-cream-100 shadow-2xl shadow-navy/20">
-        <div className="flex items-center justify-between border-b border-cream-100/10 px-4 py-2.5">
-          <div className="flex items-center gap-2">
-            <span className="flex items-center gap-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-cream-100/25" />
-              <span className="h-1.5 w-1.5 rounded-full bg-cream-100/25" />
-              <span className="h-1.5 w-1.5 rounded-full bg-gold/80" />
-            </span>
-            <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.2em] text-cream-100/50">
-              dgc.engagement
-            </span>
-          </div>
-          <div className="hidden items-center gap-3 sm:flex">
-            <span className="font-mono text-[10px] text-cream-100/40">build · 1.0.0</span>
-            <span className="font-mono text-[10px] text-cream-100/40">●  gmt</span>
-          </div>
-        </div>
-        <div className="grid gap-0 lg:grid-cols-2">
-          <pre className="overflow-x-auto p-5 font-mono text-[11.5px] leading-relaxed text-cream-100/90 lg:p-6">
-{`$ dgc engage --scope appsec,grc,cloud
-
-> phase 01  discover
-  · architecture and code review
-  · risk baseline
-  · threat model
-
-> phase 02  design
-  · target operating model
-  · controls mapped (iso + soc2)
-  · landing zone blueprint
-
-> phase 03  build
-  · guardrails as code
-  · detections and identity
-  · evidence pipeline live
-
-> phase 04  prove
-  · audit support
-  · board pack and metrics
-  · runbooks owned by the team
-
-status  ready for audit + production`}
-          </pre>
-          <div className="relative border-t border-cream-100/10 lg:border-l lg:border-t-0">
-            <div
-              aria-hidden
-              className="absolute inset-0 bg-grid-cream [background-size:32px_32px] opacity-[0.08]"
-            />
-            <div className="relative grid h-full grid-cols-2 gap-px bg-cream-100/10">
-              {[
-                ['ISO 27001', 'ready'],
-                ['SOC 2', 'evidence wired'],
-                ['SSDLC', 'shifted left'],
-                ['Landing zone', 'multi region'],
-                ['Detections', 'as code'],
-                ['Identity', 'jit + scim'],
-              ].map(([k, v]) => (
-                <div key={k} className="bg-ink-700 p-4">
-                  <p className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-gold/80">
-                    {k}
-                  </p>
-                  <p className="mt-1.5 text-xs text-cream-100/90">{v}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-px border-t border-cream-100/10 bg-cream-100/10 sm:grid-cols-4">
-          {[
-            ['Region', 'UK · EU'],
-            ['Stack', 'multi cloud'],
-            ['Method', 'four phase'],
-            ['Standard', 'iso · soc2'],
-          ].map(([k, v]) => (
-            <div key={k} className="bg-ink-700 px-4 py-3">
-              <p className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-cream-100/45">
-                {k}
-              </p>
-              <p className="mt-0.5 font-mono text-[11px] text-cream-100/90">{v}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
   );
 }

@@ -80,15 +80,30 @@ const config: Config = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        'scroll-up': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
         'pulse-soft': {
           '0%, 100%': { opacity: '0.5' },
           '50%': { opacity: '1' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '0% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        blink: {
+          '0%, 49%': { opacity: '1' },
+          '50%, 100%': { opacity: '0.25' },
         },
       },
       animation: {
         'fade-up': 'fade-up 0.7s ease-out forwards',
         marquee: 'marquee 40s linear infinite',
+        'scroll-up': 'scroll-up 30s linear infinite',
         'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+        shimmer: 'shimmer 2.5s linear infinite',
+        blink: 'blink 1.1s steps(1) infinite',
       },
     },
   },
