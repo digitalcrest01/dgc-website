@@ -11,36 +11,29 @@ export const metadata: Metadata = {
 const values = [
   {
     title: 'Trust',
-    body: 'Earned by the work, not claimed in a pitch. Reasoning, evidence, and trade offs are always on the table.',
+    body: 'Trust is the foundation of every assessment we run and every recommendation we make. We build it the only way it can be built, through transparent reasoning, measured promises, and a willingness to be wrong out loud. Our clients hand us their crown jewels, and that responsibility shapes how we behave when no one is watching.',
   },
   {
     title: 'Integrity',
-    body: 'What we say in private, we say in public. The recommendation does not change to win the engagement.',
+    body: 'Integrity is the alignment between what we know, what we say, and what we do. We will not soften a finding to keep an engagement, dilute a recommendation to avoid a hard conversation, or sign off on a control that does not work. The version we deliver in private is the version we are willing to defend in public.',
   },
   {
     title: 'Customer first',
-    body: 'Your outcome is the brief, not the contract. We measure ourselves against your business.',
+    body: 'Your outcome is our scoreboard. Not hours billed, not deliverables produced, not slides presented. We measure success by the resilience of your business, the confidence of your board, and the readiness of your team to carry the work forward. When the right answer is to do less or to stop, we are the ones to say it.',
   },
   {
     title: 'Excellence',
-    body: 'Senior people, senior standards. Quiet, exacting craft is the only acceptable default.',
+    body: 'Excellence is the discipline of refusing to settle. Senior practitioners, peer reviewed work, evidence behind every claim. We treat security as a craft, not a checklist, and we hold ourselves to the standard we would expect from the team protecting our own data. Good enough is not enough when the consequences of failure are this real.',
   },
 ];
 
 const facts = [
-  { k: 'Founded', v: '2019' },
   { k: 'HQ', v: 'United Kingdom' },
   { k: 'Model', v: 'Remote first' },
   { k: 'Clients', v: 'Scaleups + regulated' },
   { k: 'Disciplines', v: 'AppSec · GRC · SecEng · Cloud' },
   { k: 'Engagements', v: 'Sprint · Programme · Fractional' },
-];
-
-const timeline = [
-  { year: '2019', event: 'Founded in the UK. Application security and audit practice.' },
-  { year: '2020', event: 'Cloud architecture practice added across AWS, Azure, and GCP.' },
-  { year: '2022', event: 'Security engineering practice. Detection and identity at scale.' },
-  { year: '2024', event: 'Research Lab launched. Reference architectures and playbooks.' },
+  { k: 'Footprint', v: 'UK · EU' },
 ];
 
 export default function AboutPage() {
@@ -52,25 +45,29 @@ export default function AboutPage() {
           A small firm with an outsized standard.
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream-100/70">
-          Founded in 2019. Senior people on the work, clear deliverables, evidence over storytelling.
+          Digital Crest is a UK based cyber security consultancy. Senior people on the work, clear
+          deliverables, evidence over storytelling.
         </p>
       </section>
 
       <section className="container-page mt-16 lg:mt-20">
-        <p className="eyebrow eyebrow-dot">Timeline</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
-          Six years, four disciplines, one standard.
+        <p className="eyebrow eyebrow-dot">Core values</p>
+        <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-cream-100 sm:text-4xl">
+          The four lines we hold.
         </h2>
-        <ol className="mt-8 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2 lg:grid-cols-4">
-          {timeline.map((t) => (
-            <li key={t.year} className="bg-ink-700 p-5">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
-                {t.year}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-cream-100/80">{t.event}</p>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cream-100/70">
+          Values that govern every engagement, in good weather and bad.
+        </p>
+        <ul className="mt-8 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 md:grid-cols-2">
+          {values.map((v) => (
+            <li key={v.title} className="bg-ink-700 p-7">
+              <h3 className="font-display text-lg font-semibold tracking-tight text-cream-100">
+                {v.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-cream-100/75">{v.body}</p>
             </li>
           ))}
-        </ol>
+        </ul>
       </section>
 
       <section className="container-page mt-16 lg:mt-20">
@@ -95,41 +92,24 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <p className="eyebrow eyebrow-dot">Core values</p>
+            <p className="eyebrow eyebrow-dot">At a glance</p>
             <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
-              The four lines we hold.
+              The facts.
             </h2>
-            <ul className="mt-6 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2">
-              {values.map((v) => (
-                <li key={v.title} className="bg-ink-700 p-5">
-                  <h3 className="font-display text-base font-semibold tracking-tight text-cream-100">
-                    {v.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-cream-100/70">{v.body}</p>
-                </li>
+            <dl className="mt-6 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2">
+              {facts.map((f) => (
+                <div key={f.k} className="bg-ink-700 p-5">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
+                    {f.k}
+                  </dt>
+                  <dd className="mt-1.5 font-display text-base font-semibold tracking-tight text-cream-100">
+                    {f.v}
+                  </dd>
+                </div>
               ))}
-            </ul>
+            </dl>
           </div>
         </div>
-      </section>
-
-      <section className="container-page mt-16 lg:mt-20">
-        <p className="eyebrow eyebrow-dot">At a glance</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
-          The facts.
-        </h2>
-        <dl className="mt-6 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2 lg:grid-cols-3">
-          {facts.map((f) => (
-            <div key={f.k} className="bg-ink-700 p-5">
-              <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
-                {f.k}
-              </dt>
-              <dd className="mt-1.5 font-display text-base font-semibold tracking-tight text-cream-100">
-                {f.v}
-              </dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       <CTA />

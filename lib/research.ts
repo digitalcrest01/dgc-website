@@ -1,12 +1,6 @@
-import type { ComponentType } from 'react';
-import { AwsLandingZoneDiagram } from '@/components/diagrams/aws-landing-zone';
-import { AzureZeroTrustDiagram } from '@/components/diagrams/azure-zero-trust';
-import { GcpDataLakeDiagram } from '@/components/diagrams/gcp-data-lake';
-import { MulticloudDetectionDiagram } from '@/components/diagrams/multicloud-detection';
-import { SupplyChainDiagram } from '@/components/diagrams/supply-chain';
-import { Soc2EvidenceDiagram } from '@/components/diagrams/soc2-evidence';
-
 export type Section = { heading: string; paragraphs: string[]; list?: string[] };
+
+export type Reference = { label: string; url: string };
 
 export type ResearchPost = {
   slug: string;
@@ -14,11 +8,10 @@ export type ResearchPost = {
   cloud: 'AWS' | 'Azure' | 'GCP' | 'Multi-cloud' | 'CI/CD' | 'GRC';
   useCase: string;
   readTime: string;
-  published: string;
   summary: string;
-  diagram: ComponentType;
   sections: Section[];
   controls: string[];
+  references: Reference[];
   takeaway: string;
 };
 
@@ -29,10 +22,8 @@ export const research: ResearchPost[] = [
     cloud: 'AWS',
     useCase: 'Multi-account foundation',
     readTime: '9 min read',
-    published: '2025-02-12',
     summary:
       'A reference landing zone for UK and EU workloads. Account hierarchy, baseline guardrails, identity, logging, and the service control policies that keep teams inside the lines.',
-    diagram: AwsLandingZoneDiagram,
     sections: [
       {
         heading: 'The problem',
@@ -42,7 +33,7 @@ export const research: ResearchPost[] = [
         ],
       },
       {
-        heading: 'Reference architecture',
+        heading: 'Reference design',
         paragraphs: [
           'We model three organisational units. Core for shared services (audit, log archive, identity). Workloads for production, staging, and development environments. Sandbox for experiments with time bound, budget limited access.',
           'Control Tower orchestrates account vending and applies baseline guardrails. IAM Identity Center is the only path to human access, with SCIM provisioning from your IdP. AWS Config, GuardDuty, and Security Hub are enabled organisation wide on day one.',
@@ -74,6 +65,28 @@ export const research: ResearchPost[] = [
       'ISO 27001 · A.5.15, A.5.23, A.8.16',
       'CIS AWS Foundations · 1.x, 2.x, 3.x',
     ],
+    references: [
+      {
+        label: 'AWS Security Reference Architecture',
+        url: 'https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/welcome.html',
+      },
+      {
+        label: 'AWS Control Tower documentation',
+        url: 'https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html',
+      },
+      {
+        label: 'Service Control Policies (SCPs)',
+        url: 'https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html',
+      },
+      {
+        label: 'AWS Well-Architected Security Pillar',
+        url: 'https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html',
+      },
+      {
+        label: 'CIS AWS Foundations Benchmark',
+        url: 'https://www.cisecurity.org/benchmark/amazon_web_services',
+      },
+    ],
     takeaway:
       'A landing zone is not a deliverable, it is a platform you keep deploying onto for years. Build it small, build it right, build it as code.',
   },
@@ -83,10 +96,8 @@ export const research: ResearchPost[] = [
     cloud: 'Azure',
     useCase: 'Internal and partner APIs',
     readTime: '11 min read',
-    published: '2025-01-28',
     summary:
       'An Azure pattern for exposing APIs to users and partners with no implicit trust. Entra ID for identity, conditional access for posture, APIM for policy, and private endpoints for everything behind the line.',
-    diagram: AzureZeroTrustDiagram,
     sections: [
       {
         heading: 'Why zero trust on Azure is different',
@@ -127,6 +138,32 @@ export const research: ResearchPost[] = [
       'ISO 27001 · A.8.20, A.8.21, A.8.22',
       'OWASP API Top 10 (2023)',
     ],
+    references: [
+      {
+        label: 'Microsoft Zero Trust guidance',
+        url: 'https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview',
+      },
+      {
+        label: 'Microsoft Cybersecurity Reference Architectures',
+        url: 'https://learn.microsoft.com/en-us/security/adoption/mcra',
+      },
+      {
+        label: 'Entra ID Conditional Access',
+        url: 'https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview',
+      },
+      {
+        label: 'API Management policy reference',
+        url: 'https://learn.microsoft.com/en-us/azure/api-management/api-management-policies',
+      },
+      {
+        label: 'Azure Private Link overview',
+        url: 'https://learn.microsoft.com/en-us/azure/private-link/private-link-overview',
+      },
+      {
+        label: 'NIST SP 800-207 Zero Trust Architecture',
+        url: 'https://csrc.nist.gov/publications/detail/sp/800-207/final',
+      },
+    ],
     takeaway:
       'Zero trust on Azure is not a product, it is the combination of identity, network, and policy moving in step. Get the three to agree and the rest follows.',
   },
@@ -136,10 +173,8 @@ export const research: ResearchPost[] = [
     cloud: 'GCP',
     useCase: 'Analytics on regulated data',
     readTime: '10 min read',
-    published: '2025-01-14',
     summary:
       'Build a BigQuery centred data lake that handles regulated data with classification, customer managed keys, VPC Service Controls, and access approval baked in from the start.',
-    diagram: GcpDataLakeDiagram,
     sections: [
       {
         heading: 'The starting point',
@@ -180,6 +215,32 @@ export const research: ResearchPost[] = [
       'ISO 27701 · privacy controls',
       'UK GDPR · article 32 technical measures',
     ],
+    references: [
+      {
+        label: 'Google Cloud Security Foundations Guide',
+        url: 'https://cloud.google.com/architecture/security-foundations',
+      },
+      {
+        label: 'BigQuery customer managed encryption keys',
+        url: 'https://cloud.google.com/bigquery/docs/customer-managed-encryption',
+      },
+      {
+        label: 'VPC Service Controls overview',
+        url: 'https://cloud.google.com/vpc-service-controls/docs/overview',
+      },
+      {
+        label: 'Workload Identity Federation',
+        url: 'https://cloud.google.com/iam/docs/workload-identity-federation',
+      },
+      {
+        label: 'Cloud Data Loss Prevention',
+        url: 'https://cloud.google.com/sensitive-data-protection',
+      },
+      {
+        label: 'Security Command Center',
+        url: 'https://cloud.google.com/security-command-center',
+      },
+    ],
     takeaway:
       'Governance is cheap when you set it up before the data lands. It is a programme of work once the data is already everywhere.',
   },
@@ -189,10 +250,8 @@ export const research: ResearchPost[] = [
     cloud: 'Multi-cloud',
     useCase: 'Unified threat detection',
     readTime: '8 min read',
-    published: '2024-12-18',
     summary:
       'A pattern for a single detection programme across three clouds. Sigma rules in git, normalised events, replay tests, and a SOAR pipeline that closes the loop without paging a human at 3am.',
-    diagram: MulticloudDetectionDiagram,
     sections: [
       {
         heading: 'One pipeline, many clouds',
@@ -232,6 +291,28 @@ export const research: ResearchPost[] = [
       'MITRE ATT&CK · cloud, enterprise',
       'ISO 27001 · A.5.25, A.8.16',
     ],
+    references: [
+      {
+        label: 'Sigma rule format',
+        url: 'https://github.com/SigmaHQ/sigma',
+      },
+      {
+        label: 'OCSF schema',
+        url: 'https://schema.ocsf.io/',
+      },
+      {
+        label: 'MITRE ATT&CK',
+        url: 'https://attack.mitre.org/',
+      },
+      {
+        label: 'Microsoft Sentinel documentation',
+        url: 'https://learn.microsoft.com/en-us/azure/sentinel/overview',
+      },
+      {
+        label: 'Google Chronicle SecOps',
+        url: 'https://cloud.google.com/chronicle/docs',
+      },
+    ],
     takeaway:
       'A detection programme is a software product. Treat it like one. Code review, tests, releases, metrics.',
   },
@@ -241,10 +322,8 @@ export const research: ResearchPost[] = [
     cloud: 'CI/CD',
     useCase: 'Build, attest, deploy',
     readTime: '7 min read',
-    published: '2024-11-22',
     summary:
       'The shortest path to a defensible CI pipeline. Ephemeral runners, signed builds, SBOM and provenance, and an admission controller that refuses to run anything unsigned.',
-    diagram: SupplyChainDiagram,
     sections: [
       {
         heading: 'Why bother with SLSA',
@@ -285,6 +364,32 @@ export const research: ResearchPost[] = [
       'NIST SSDF · PO, PS, PW',
       'CIS Software Supply Chain · 1.x to 5.x',
     ],
+    references: [
+      {
+        label: 'SLSA framework',
+        url: 'https://slsa.dev/',
+      },
+      {
+        label: 'Sigstore Cosign',
+        url: 'https://docs.sigstore.dev/cosign/overview/',
+      },
+      {
+        label: 'Syft (SBOM generator)',
+        url: 'https://github.com/anchore/syft',
+      },
+      {
+        label: 'in-toto attestation framework',
+        url: 'https://in-toto.io/',
+      },
+      {
+        label: 'Kyverno policy engine',
+        url: 'https://kyverno.io/',
+      },
+      {
+        label: 'NIST Secure Software Development Framework',
+        url: 'https://csrc.nist.gov/publications/detail/sp/800-218/final',
+      },
+    ],
     takeaway:
       'A signed supply chain is one of the highest leverage investments a platform team can make. Three weeks of work, years of pay off.',
   },
@@ -294,10 +399,8 @@ export const research: ResearchPost[] = [
     cloud: 'GRC',
     useCase: 'Continuous audit readiness',
     readTime: '9 min read',
-    published: '2024-10-30',
     summary:
       'Stop chasing screenshots. A pull based evidence pipeline that maps system state to control requirements, alerts on drift, and gives auditors a read only window into the truth.',
-    diagram: Soc2EvidenceDiagram,
     sections: [
       {
         heading: 'The screenshot problem',
@@ -337,6 +440,28 @@ export const research: ResearchPost[] = [
       'SOC 2 · Type II · trust services criteria',
       'ISO 27001 · A.5, A.6, A.8',
       'NIST CSF · ID.GV, PR.IP, DE.CM',
+    ],
+    references: [
+      {
+        label: 'AICPA Trust Services Criteria',
+        url: 'https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2',
+      },
+      {
+        label: 'ISO/IEC 27001',
+        url: 'https://www.iso.org/standard/27001',
+      },
+      {
+        label: 'NIST Cybersecurity Framework',
+        url: 'https://www.nist.gov/cyberframework',
+      },
+      {
+        label: 'AWS S3 Object Lock',
+        url: 'https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html',
+      },
+      {
+        label: 'CIS Controls v8',
+        url: 'https://www.cisecurity.org/controls/v8',
+      },
     ],
     takeaway:
       'If the audit cannot read your controls directly, you are paying twice. Once to run the controls, once to prove they ran.',

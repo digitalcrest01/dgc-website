@@ -26,7 +26,7 @@ export function SiteFooter() {
           </p>
           <p className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80">
             <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-gold" />
-            est. 2019 · united kingdom
+            united kingdom · remote first
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <a

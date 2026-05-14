@@ -1,7 +1,7 @@
 const signals = [
-  { value: 'Est. 2019', label: 'Operating since' },
-  { value: '4', label: 'Disciplines' },
-  { value: '12+ yrs', label: 'Median experience' },
+  { value: 'United Kingdom', label: 'Headquarters' },
+  { value: 'Remote first', label: 'Operating model' },
+  { value: '4 disciplines', label: 'Practice areas' },
   { value: '3 clouds', label: 'AWS · Azure · GCP' },
   { value: 'UK · EU', label: 'Primary regions' },
   { value: 'GMT', label: 'Working hours' },

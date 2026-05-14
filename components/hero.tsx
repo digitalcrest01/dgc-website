@@ -55,14 +55,14 @@ function SystemBadge() {
         <span className="absolute inline-flex h-full w-full animate-pulse-soft rounded-full bg-gold" />
         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
       </span>
-      operational · est. 2019
+      operational · uk · gmt
     </span>
   );
 }
 
 function HeroStats() {
   const stats = [
-    { value: 'Est. 2019', label: 'Founded' },
+    { value: 'United Kingdom', label: 'HQ' },
     { value: '4', label: 'Disciplines' },
     { value: 'AWS · Azure · GCP', label: 'Cloud platforms' },
     { value: 'ISO · SOC · NIST', label: 'Frameworks' },

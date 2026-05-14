@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { ArrowUpRight, Clock, ArrowLeft, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Clock, ArrowLeft, ShieldCheck, ExternalLink } from 'lucide-react';
 import { research, getResearchPost } from '@/lib/research';
 import { CTA } from '@/components/cta';
 
@@ -23,7 +23,6 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
   if (!post) notFound();
 
   const others = research.filter((p) => p.slug !== post.slug).slice(0, 3);
-  const Diagram = post.diagram;
 
   return (
     <>
@@ -42,9 +41,6 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
             <Clock className="h-3 w-3" />
             {post.readTime}
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/45">
-            published · {post.published}
-          </span>
         </div>
 
         <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold tracking-tight text-cream-100 text-balance sm:text-4xl lg:text-5xl">
@@ -53,11 +49,7 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-cream-100/75">{post.summary}</p>
       </section>
 
-      <section className="container-page mt-10 lg:mt-14">
-        <Diagram />
-      </section>
-
-      <section className="container-page mt-14 lg:mt-20">
+      <section className="container-page mt-12 lg:mt-16">
         <div className="grid gap-10 lg:grid-cols-[2fr_1fr]">
           <article className="space-y-10">
             {post.sections.map((s) => (
@@ -89,6 +81,38 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
               </div>
             ))}
 
+            <div>
+              <h2 className="font-display text-xl font-semibold tracking-tight text-cream-100 sm:text-2xl">
+                References
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-cream-100/70">
+                Official documentation and standards we draw on for this pattern.
+              </p>
+              <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                {post.references.map((r) => (
+                  <li key={r.url}>
+                    <a
+                      href={r.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-start justify-between gap-3 rounded-lg border border-cream-100/10 bg-ink-700/60 p-3 transition-colors hover:border-gold/30 hover:bg-ink-700"
+                    >
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-cream-100">{r.label}</p>
+                        <p className="mt-0.5 truncate font-mono text-[10px] text-cream-100/45">
+                          {hostFromUrl(r.url)}
+                        </p>
+                      </div>
+                      <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cream-100/40 group-hover:text-gold" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/45">
+                Links open in a new tab
+              </p>
+            </div>
+
             <div className="rounded-2xl border border-cream-100/10 bg-ink-700 p-6 text-cream-100 sm:p-8">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
                 Takeaway
@@ -107,7 +131,7 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
               <ul className="mt-3 space-y-2">
                 {post.controls.map((c) => (
                   <li key={c} className="flex items-start gap-2 text-sm text-cream-100/80">
-                    <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-500" />
+                    <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" />
                     <span>{c}</span>
                   </li>
                 ))}
@@ -158,4 +182,12 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
       <CTA />
     </>
   );
+}
+
+function hostFromUrl(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
 }
