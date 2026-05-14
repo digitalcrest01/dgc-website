@@ -31,38 +31,33 @@ export const services: Service[] = [
     tagline: 'Threat modelling, secure SDLC, code and pipeline review.',
     icon: ShieldCheck,
     intro:
-      'We work inside engineering teams to find vulnerabilities early, shift assurance left, and give product owners a clear, measurable view of risk across the software you build and buy.',
+      'We find vulnerabilities early and give product owners a clear view of risk across the software you build and buy.',
     outcomes: [
-      'Reduced critical findings in production by design',
-      'Threat models that engineers actually use',
-      'Faster releases with security gates that fit your pipeline',
-      'Evidence ready for SOC 2, ISO 27001 and customer reviews',
+      'Fewer critical findings in production',
+      'Threat models engineers actually use',
+      'Security gates that fit your pipeline',
+      'Evidence ready for SOC 2 and ISO 27001',
     ],
     capabilities: [
       {
         title: 'Threat modelling at sprint pace',
-        detail:
-          'STRIDE and attack tree workshops aligned to your design reviews, with living diagrams stored next to the code.',
+        detail: 'STRIDE workshops tied to design reviews. Living diagrams stored with the code.',
       },
       {
         title: 'Secure code and architecture review',
-        detail:
-          'Manual review of high risk components, paired with SAST tuning so the noise goes down and the signal goes up.',
+        detail: 'Manual review of high risk components, paired with SAST tuned for signal over noise.',
       },
       {
         title: 'API and web application testing',
-        detail:
-          'Authenticated grey box testing of REST, GraphQL and mobile backends, mapped to OWASP ASVS and your business logic.',
+        detail: 'Authenticated grey box testing against OWASP ASVS and your business logic.',
       },
       {
         title: 'Pipeline and supply chain hardening',
-        detail:
-          'SBOMs, signed builds, secret scanning, and policy as code so the path to production is the secure path.',
+        detail: 'SBOMs, signed builds, secret scanning, policy as code.',
       },
       {
         title: 'Developer enablement',
-        detail:
-          'Targeted training and office hours so the team owns its security posture between engagements.',
+        detail: 'Targeted training and office hours so the team owns its posture between engagements.',
       },
     ],
     stack: [
@@ -82,8 +77,8 @@ export const services: Service[] = [
       lines: [
         { tag: 'asset', text: 'customer-pii-store' },
         { tag: 'trust', text: 'web → api → kms → rds' },
-        { tag: 'stride', text: 'S.T.R.I.D.E. mapped per flow' },
-        { tag: 'mit', text: '14 controls, 4 accepted, 10 tracked' },
+        { tag: 'stride', text: 'mapped per flow' },
+        { tag: 'mit', text: '14 controls · 10 tracked' },
         { tag: 'owner', text: 'platform.security@' },
       ],
     },
@@ -93,41 +88,36 @@ export const services: Service[] = [
     index: '02',
     name: 'GRC and Audit',
     shortName: 'GRC and Audit',
-    tagline: 'Frameworks, controls and audit readiness without the theatre.',
+    tagline: 'Frameworks, controls, and audit readiness without the theatre.',
     icon: ClipboardCheck,
     intro:
-      'We build governance programmes that pass audit and survive a real incident. Pragmatic control design, evidence that writes itself, and a board narrative that holds up to scrutiny.',
+      'Governance programmes that pass audit and survive a real incident. Pragmatic control design and evidence that writes itself.',
     outcomes: [
-      'Certification ready in months, not quarters',
-      'Control libraries mapped to multiple frameworks at once',
-      'Continuous evidence collection wired into your stack',
-      'Risk register the executive team can actually use',
+      'Certification ready in months',
+      'Controls mapped to multiple frameworks at once',
+      'Continuous evidence wired into your stack',
+      'A risk register the board can use',
     ],
     capabilities: [
       {
         title: 'ISO 27001 and SOC 2 readiness',
-        detail:
-          'Gap analysis, scoping, ISMS build out, statement of applicability and audit liaison through certification.',
+        detail: 'Gap analysis, scoping, ISMS build, statement of applicability, audit liaison.',
       },
       {
         title: 'NIST CSF and CIS Controls',
-        detail:
-          'Maturity assessments with a costed roadmap, prioritised by risk reduction per pound spent.',
+        detail: 'Maturity assessment with a costed roadmap, prioritised by risk reduction.',
       },
       {
         title: 'Third party and supplier risk',
-        detail:
-          'Risk tiering, due diligence questionnaires, contract clauses and continuous monitoring of critical suppliers.',
+        detail: 'Risk tiering, due diligence, contract clauses, continuous monitoring.',
       },
       {
-        title: 'DORA, NIS2 and UK regulatory alignment',
-        detail:
-          'Operational resilience mapping, incident reporting playbooks and ICT risk register for regulated entities.',
+        title: 'DORA, NIS2 and UK regulation',
+        detail: 'Operational resilience mapping, incident reporting, ICT risk register.',
       },
       {
         title: 'Virtual CISO',
-        detail:
-          'Fractional security leadership for scaleups: board reporting, programme delivery, and audit defence.',
+        detail: 'Fractional security leadership: board reporting, programme delivery, audit defence.',
       },
     ],
     stack: [
@@ -146,9 +136,9 @@ export const services: Service[] = [
       label: 'control-mapping.yaml',
       lines: [
         { tag: 'control', text: 'AC-2 account management' },
-        { tag: 'iso', text: 'A.5.16 identity management' },
+        { tag: 'iso', text: 'A.5.16 identity' },
         { tag: 'soc2', text: 'CC6.1 logical access' },
-        { tag: 'evidence', text: 'okta → drata → s3 (immutable)' },
+        { tag: 'evidence', text: 'okta → drata → s3' },
         { tag: 'owner', text: 'people.ops + platform' },
       ],
     },
@@ -158,41 +148,36 @@ export const services: Service[] = [
     index: '03',
     name: 'Security Engineering',
     shortName: 'Security Engineering',
-    tagline: 'Detection, identity and platform controls built to run.',
+    tagline: 'Detection, identity, and platform controls built to run.',
     icon: Wrench,
     intro:
-      'We design and build the controls your security team operates every day. Identity, detection and response, secrets and key management, and the automation that keeps them honest.',
+      'We design and build the controls your security team operates every day. Identity, detection, response, secrets, and the automation that keeps them honest.',
     outcomes: [
       'Identity that scales to thousands of users and services',
-      'Detections tuned to your threat model, not a vendor demo',
+      'Detections tuned to your threat model',
       'Mean time to respond measured in minutes',
-      'Toil reduced through automation, not extra headcount',
+      'Toil cut through automation, not headcount',
     ],
     capabilities: [
       {
         title: 'Identity and access engineering',
-        detail:
-          'SSO, MFA, SCIM, just in time access, privileged access workflows and workload identity for services.',
+        detail: 'SSO, MFA, SCIM, just in time access, workload identity.',
       },
       {
-        title: 'Detection and response build outs',
-        detail:
-          'SIEM and XDR design, detection as code, playbooks, purple team exercises and runbook automation.',
+        title: 'Detection and response',
+        detail: 'SIEM and XDR design, detection as code, playbooks, purple teaming.',
       },
       {
         title: 'Secrets and key management',
-        detail:
-          'Vault, KMS and HSM patterns, secret rotation, envelope encryption and certificate lifecycle automation.',
+        detail: 'Vault, KMS and HSM patterns, secret rotation, certificate lifecycle.',
       },
       {
         title: 'Endpoint and workload protection',
-        detail:
-          'EDR rollout, baseline hardening, container runtime security and policy enforcement at the kernel.',
+        detail: 'EDR rollout, baseline hardening, container runtime security.',
       },
       {
         title: 'Incident response readiness',
-        detail:
-          'Tabletop exercises, comms plans, forensic readiness and 24x7 retainer options through partners.',
+        detail: 'Tabletops, comms plans, forensic readiness, 24x7 retainer options.',
       },
     ],
     stack: [
@@ -210,7 +195,7 @@ export const services: Service[] = [
     artifact: {
       label: 'detection.sigma',
       lines: [
-        { tag: 'title', text: 'aws iam role assumed from new geo' },
+        { tag: 'title', text: 'aws role assumed from new geo' },
         { tag: 'level', text: 'high' },
         { tag: 'logsource', text: 'cloudtrail' },
         { tag: 'detection', text: 'AssumeRole + geo ≠ baseline' },
@@ -223,12 +208,12 @@ export const services: Service[] = [
     index: '04',
     name: 'Cloud Architecture',
     shortName: 'Cloud Architecture',
-    tagline: 'Secure, resilient, cost aware platforms on AWS, Azure and GCP.',
+    tagline: 'Secure, resilient, cost aware platforms on AWS, Azure, and GCP.',
     icon: Cloud,
     intro:
-      'We design cloud platforms that are secure by default and economical to run. Landing zones, network and data architecture, and the guardrails that keep teams moving fast without breaking the model.',
+      'Cloud platforms that are secure by default and economical to run. Landing zones, network and data architecture, and the guardrails that keep teams fast.',
     outcomes: [
-      'Multi account landing zones up in weeks',
+      'Multi account landing zones in weeks',
       'Workload patterns that pass review on day one',
       'Cloud spend that tracks business value',
       'A platform that scales from first product to enterprise',
@@ -236,28 +221,23 @@ export const services: Service[] = [
     capabilities: [
       {
         title: 'Landing zone and platform design',
-        detail:
-          'Account, subscription and project hierarchies, baseline guardrails, networking and shared services.',
+        detail: 'Account hierarchies, baseline guardrails, networking, shared services.',
       },
       {
         title: 'Zero trust networking',
-        detail:
-          'Segmentation, private endpoints, service mesh and east west controls for modern workloads.',
+        detail: 'Segmentation, private endpoints, service mesh, east west controls.',
       },
       {
         title: 'Data architecture and protection',
-        detail:
-          'Classification, encryption strategy, tokenisation, data residency and analytics platform security.',
+        detail: 'Classification, encryption, tokenisation, residency, analytics platform security.',
       },
       {
         title: 'Resilience and continuity',
-        detail:
-          'Multi region patterns, recovery objectives, chaos drills and DR runbooks that actually get tested.',
+        detail: 'Multi region patterns, recovery objectives, chaos drills, DR runbooks.',
       },
       {
         title: 'FinOps and policy as code',
-        detail:
-          'Cost guardrails, OPA, Sentinel and SCPs, drift detection and infrastructure review automation.',
+        detail: 'Cost guardrails, OPA, Sentinel, SCPs, drift detection.',
       },
     ],
     stack: [
@@ -278,8 +258,8 @@ export const services: Service[] = [
         { tag: 'org', text: 'aws_organizations_organization' },
         { tag: 'ous', text: 'core / workloads / sandbox' },
         { tag: 'scp', text: 'deny region != eu-west-2' },
-        { tag: 'baseline', text: 'guardduty + config + securityhub' },
-        { tag: 'logging', text: 'central log archive (immutable)' },
+        { tag: 'baseline', text: 'guardduty + securityhub' },
+        { tag: 'logging', text: 'central archive (immutable)' },
       ],
     },
   },
