@@ -9,21 +9,21 @@ export default function PrivacyPage() {
   return (
     <section className="container-page max-w-3xl pt-14 lg:pt-20">
       <p className="eyebrow eyebrow-dot">Legal</p>
-      <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
+      <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-cream-100 sm:text-5xl">
         Privacy notice
       </h1>
-      <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+      <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
         Last updated · 2025
       </p>
 
-      <div className="mt-8 space-y-5 text-sm leading-relaxed text-navy/80">
+      <div className="mt-8 space-y-5 text-sm leading-relaxed text-cream-100/80">
         <p>
           Digital Crest Consulting Ltd is the data controller for personal information collected
           through digitalcrest.co.uk. We process data under the UK GDPR and the Data Protection
           Act 2018.
         </p>
 
-        <h2 className="font-display text-lg font-semibold tracking-tight text-navy">
+        <h2 className="font-display text-lg font-semibold tracking-tight text-cream-100">
           What we collect
         </h2>
         <p>
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           and reliability.
         </p>
 
-        <h2 className="font-display text-lg font-semibold tracking-tight text-navy">
+        <h2 className="font-display text-lg font-semibold tracking-tight text-cream-100">
           Why we collect it
         </h2>
         <ul className="list-disc space-y-1.5 pl-5">
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
           <li>To improve our services in aggregate. We do not track you personally.</li>
         </ul>
 
-        <h2 className="font-display text-lg font-semibold tracking-tight text-navy">
+        <h2 className="font-display text-lg font-semibold tracking-tight text-cream-100">
           How long we keep it
         </h2>
         <p>
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
           thirteen months at most.
         </p>
 
-        <h2 className="font-display text-lg font-semibold tracking-tight text-navy">
+        <h2 className="font-display text-lg font-semibold tracking-tight text-cream-100">
           Your rights
         </h2>
         <p>
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
           . You can also complain to the ICO at ico.org.uk.
         </p>
 
-        <h2 className="font-display text-lg font-semibold tracking-tight text-navy">
+        <h2 className="font-display text-lg font-semibold tracking-tight text-cream-100">
           Sub processors
         </h2>
         <p>

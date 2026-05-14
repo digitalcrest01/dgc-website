@@ -64,12 +64,12 @@ export function CookieConsent() {
       role="dialog"
       aria-modal="false"
       aria-labelledby="cookie-heading"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-3xl rounded-2xl border border-navy/15 bg-cream-100 shadow-2xl shadow-navy/15 lg:inset-x-auto lg:left-6 lg:bottom-6 lg:right-auto lg:w-[420px]"
+      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-3xl rounded-2xl border border-cream-100/15 bg-ink-700 shadow-2xl shadow-navy/15 lg:inset-x-auto lg:left-6 lg:bottom-6 lg:right-auto lg:w-[420px]"
     >
       <div className="flex items-start justify-between gap-3 px-5 pt-4">
         <div className="flex items-center gap-2">
           <Cookie className="h-4 w-4 text-gold-500" />
-          <p id="cookie-heading" className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/65">
+          <p id="cookie-heading" className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/65">
             Cookies and privacy
           </p>
         </div>
@@ -77,7 +77,7 @@ export function CookieConsent() {
           type="button"
           aria-label="Dismiss for this session"
           onClick={() => setOpen(false)}
-          className="rounded-full p-1 text-navy/50 hover:bg-navy/5 hover:text-navy"
+          className="rounded-full p-1 text-cream-100/50 hover:bg-ink-700/5 hover:text-cream-100"
         >
           <X className="h-3.5 w-3.5" />
         </button>
@@ -85,11 +85,11 @@ export function CookieConsent() {
 
       {!showSettings ? (
         <div className="px-5 pb-5 pt-3">
-          <p className="text-sm leading-relaxed text-navy/80">
+          <p className="text-sm leading-relaxed text-cream-100/80">
             We use a small set of cookies. Essential cookies make the site work. Analytics and
             preferences cookies are optional and only set if you accept.
           </p>
-          <p className="mt-2 text-[12px] text-navy/55">
+          <p className="mt-2 text-[12px] text-cream-100/55">
             See our{' '}
             <Link href="/cookies" className="link-underline">
               cookie notice
@@ -122,7 +122,7 @@ export function CookieConsent() {
             <button
               type="button"
               onClick={() => setShowSettings(true)}
-              className="ml-auto text-[12px] font-medium text-navy/70 underline-offset-4 hover:underline"
+              className="ml-auto text-[12px] font-medium text-cream-100/70 underline-offset-4 hover:underline"
             >
               Manage
             </button>
@@ -165,7 +165,7 @@ export function CookieConsent() {
             >
               Back
             </button>
-            <span className="ml-auto inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.18em] text-navy/45">
+            <span className="ml-auto inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/45">
               <ShieldCheck className="h-3 w-3 text-gold-500" />
               UK GDPR
             </span>
@@ -191,22 +191,22 @@ function Row({
 }) {
   return (
     <label
-      className={`flex items-start justify-between gap-3 rounded-lg border border-navy/10 bg-cream-50 p-3 ${
-        locked ? 'opacity-90' : 'cursor-pointer hover:bg-cream-50/80'
+      className={`flex items-start justify-between gap-3 rounded-lg border border-cream-100/10 bg-ink-600 p-3 ${
+        locked ? 'opacity-90' : 'cursor-pointer hover:bg-ink-600/80'
       }`}
     >
       <div>
-        <p className="text-[13px] font-semibold text-navy">{title}</p>
-        <p className="mt-0.5 text-[11.5px] leading-snug text-navy/65">{detail}</p>
+        <p className="text-[13px] font-semibold text-cream-100">{title}</p>
+        <p className="mt-0.5 text-[11.5px] leading-snug text-cream-100/65">{detail}</p>
       </div>
       <span
         aria-hidden
         className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors ${
-          checked ? 'bg-navy' : 'bg-navy/15'
+          checked ? 'bg-ink-700' : 'bg-ink-700/15'
         }`}
       >
         <span
-          className={`inline-block h-4 w-4 rounded-full bg-cream-100 shadow-sm transition-transform ${
+          className={`inline-block h-4 w-4 rounded-full bg-ink-700 shadow-sm transition-transform ${
             checked ? 'translate-x-4' : 'translate-x-0.5'
           }`}
         />

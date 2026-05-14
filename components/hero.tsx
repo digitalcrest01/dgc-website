@@ -6,7 +6,7 @@ export function Hero() {
     <section className="relative overflow-hidden pt-14 lg:pt-20">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-grid-navy [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-grid-ink [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"
       />
       <div
         aria-hidden
@@ -17,14 +17,14 @@ export function Hero() {
         <div className="flex flex-col items-start gap-6">
           <div className="flex flex-wrap items-center gap-3">
             <div className="eyebrow eyebrow-dot">UK cyber security consultancy</div>
-            <span className="hidden h-3 w-px bg-navy/15 sm:inline-block" />
+            <span className="hidden h-3 w-px bg-ink-700/15 sm:inline-block" />
             <SystemBadge />
           </div>
 
-          <h1 className="max-w-4xl font-display text-[34px] font-semibold leading-[1.05] tracking-tightest text-balance text-navy sm:text-5xl lg:text-[56px]">
+          <h1 className="max-w-4xl font-display text-[34px] font-semibold leading-[1.05] tracking-tightest text-balance text-cream-100 sm:text-5xl lg:text-[56px]">
             Engineered security for the teams shipping critical software.
           </h1>
-          <p className="max-w-xl text-base leading-relaxed text-navy/75">
+          <p className="max-w-xl text-base leading-relaxed text-cream-100/75">
             Application security, GRC and audit, security engineering, and cloud architecture.
             Senior practitioners. Built into your pipeline, measured against your business.
           </p>
@@ -50,7 +50,7 @@ export function Hero() {
 
 function SystemBadge() {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-cream-50 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-navy/65">
+    <span className="inline-flex items-center gap-2 rounded-full border border-cream-100/15 bg-ink-600 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/65">
       <span className="relative flex h-1.5 w-1.5">
         <span className="absolute inline-flex h-full w-full animate-pulse-soft rounded-full bg-gold" />
         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
@@ -68,13 +68,13 @@ function HeroStats() {
     { value: 'ISO · SOC · NIST', label: 'Frameworks' },
   ];
   return (
-    <dl className="mt-4 grid w-full grid-cols-2 gap-px overflow-hidden rounded-xl border border-navy/10 bg-navy/10 lg:grid-cols-4">
+    <dl className="mt-4 grid w-full grid-cols-2 gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 lg:grid-cols-4">
       {stats.map((s) => (
-        <div key={s.label} className="bg-cream-100 p-4">
-          <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-navy/55">
+        <div key={s.label} className="bg-ink-700 p-4">
+          <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/55">
             {s.label}
           </dt>
-          <dd className="mt-1.5 font-display text-base font-semibold text-navy lg:text-lg">
+          <dd className="mt-1.5 font-display text-base font-semibold text-cream-100 lg:text-lg">
             {s.value}
           </dd>
         </div>
@@ -87,7 +87,7 @@ function HeroTerminal() {
   return (
     <div className="relative mx-auto mt-16 max-w-5xl">
       <div className="absolute -inset-x-10 -inset-y-8 -z-10 rounded-3xl bg-gradient-to-br from-gold/20 via-transparent to-navy/10 blur-3xl" />
-      <div className="overflow-hidden rounded-2xl border border-navy/15 bg-navy text-cream-100 shadow-2xl shadow-navy/20">
+      <div className="overflow-hidden rounded-2xl border border-cream-100/15 bg-ink-700 text-cream-100 shadow-2xl shadow-navy/20">
         <div className="flex items-center justify-between border-b border-cream-100/10 px-4 py-2.5">
           <div className="flex items-center gap-2">
             <span className="flex items-center gap-1">
@@ -144,7 +144,7 @@ status  ready for audit + production`}
                 ['Detections', 'as code'],
                 ['Identity', 'jit + scim'],
               ].map(([k, v]) => (
-                <div key={k} className="bg-navy/95 p-4">
+                <div key={k} className="bg-ink-700 p-4">
                   <p className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-gold/80">
                     {k}
                   </p>
@@ -161,7 +161,7 @@ status  ready for audit + production`}
             ['Method', 'four phase'],
             ['Standard', 'iso · soc2'],
           ].map(([k, v]) => (
-            <div key={k} className="bg-navy/95 px-4 py-3">
+            <div key={k} className="bg-ink-700 px-4 py-3">
               <p className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-cream-100/45">
                 {k}
               </p>

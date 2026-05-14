@@ -4,18 +4,18 @@ import { ArrowUpRight, Mail } from 'lucide-react';
 export function CTA() {
   return (
     <section className="container-page mt-24 lg:mt-32">
-      <div className="relative overflow-hidden rounded-2xl border border-navy/10 bg-cream-100 p-8 lg:p-12">
+      <div className="relative overflow-hidden rounded-2xl border border-cream-100/10 bg-ink-700 p-8 lg:p-12">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-grid-navy [background-size:48px_48px] opacity-[0.08]"
+          className="pointer-events-none absolute inset-0 bg-grid-ink [background-size:48px_48px] opacity-[0.08]"
         />
         <div className="relative grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <p className="eyebrow eyebrow-dot">Get started</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy text-balance sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream-100 text-balance sm:text-4xl">
               Tell us where it hurts. We will tell you what good looks like.
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-navy/70">
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-cream-100/70">
               A 30 minute call with a senior practitioner. No sales motion. Clear next step.
             </p>
           </div>
@@ -28,7 +28,7 @@ export function CTA() {
               <Mail className="h-4 w-4" />
               enquiries@digitalcrest.co.uk
             </a>
-            <p className="mt-1 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-navy/45">
+            <p className="mt-1 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-cream-100/45">
               UK · remote first · GMT
             </p>
           </div>

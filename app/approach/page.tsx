@@ -14,10 +14,10 @@ export default function ApproachPage() {
     <>
       <section className="container-page pt-14 lg:pt-20">
         <p className="eyebrow eyebrow-dot">Approach</p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight text-navy text-balance sm:text-5xl">
+        <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight text-cream-100 text-balance sm:text-5xl">
           A clear method. Honest deliverables.
         </h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-navy/70">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream-100/70">
           Four phases that flow into each other. You see the work, the artefacts, and the controls
           we leave behind.
         </p>

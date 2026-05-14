@@ -38,10 +38,10 @@ export function Approach() {
         <div className="grid gap-10 lg:grid-cols-[1fr_2fr]">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <p className="eyebrow eyebrow-dot">How we work</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream-100 sm:text-4xl">
               A method, not a methodology.
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-navy/70">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-cream-100/70">
               Four phases, repeatable, transparent. We tell you what we will do, do it, then prove
               it.
             </p>
@@ -50,20 +50,20 @@ export function Approach() {
           <ol className="space-y-3">
             {phases.map((p) => (
               <li key={p.label}>
-                <div className="group grid grid-cols-[40px_1fr] gap-5 rounded-xl border border-transparent p-4 transition-colors hover:border-navy/10 hover:bg-cream-100/60">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-navy/15 bg-cream-50 text-gold-500">
+                <div className="group grid grid-cols-[40px_1fr] gap-5 rounded-xl border border-transparent p-4 transition-colors hover:border-cream-100/10 hover:bg-ink-700/60">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-cream-100/15 bg-ink-600 text-gold-500">
                     <p.icon className="h-4 w-4" />
                   </div>
                   <div>
                     <div className="flex items-baseline justify-between gap-4">
-                      <h3 className="font-display text-xl font-semibold tracking-tight text-navy">
+                      <h3 className="font-display text-xl font-semibold tracking-tight text-cream-100">
                         {p.label}
                       </h3>
-                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-navy/45">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/45">
                         {p.code}
                       </span>
                     </div>
-                    <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-navy/70">
+                    <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-cream-100/70">
                       {p.body}
                     </p>
                     <div className="mt-3 flex flex-wrap gap-1.5">

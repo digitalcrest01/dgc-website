@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --bg: #F2ECDC;
-  --bg-soft: #F7F2E5;
-  --ink: #0E1F40;
-  --ink-soft: #1F3361;
-  --gold: #C3A463;
-  --gold-soft: #D2B576;
-  --line: rgba(14, 31, 64, 0.12);
+  --bg: #04060E;
+  --bg-soft: #080C18;
+  --surface: #0E1426;
+  --surface-2: #151D34;
+  --ink: #F2ECDC;
+  --ink-mute: rgba(242, 236, 220, 0.7);
+  --ink-faint: rgba(242, 236, 220, 0.45);
+  --gold: #D2B576;
+  --gold-soft: #E2CD90;
+  --line: rgba(242, 236, 220, 0.1);
 }
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 body {
@@ -25,7 +29,7 @@ body {
 }
 
 ::selection {
-  background: rgba(195, 164, 99, 0.4);
+  background: rgba(210, 181, 118, 0.35);
   color: var(--ink);
 }
 
@@ -35,12 +39,12 @@ body {
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-navy/70;
+    @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-cream-100/70;
   }
 
   .eyebrow-dot::before {
     content: '';
-    @apply inline-block h-1.5 w-1.5 rounded-full bg-gold;
+    @apply inline-block h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(210,181,118,0.7)];
   }
 
   .btn {
@@ -48,31 +52,35 @@ body {
   }
 
   .btn-primary {
-    @apply btn bg-navy text-cream-100 hover:bg-navy-400 hover:-translate-y-px;
+    @apply btn bg-gold text-ink-900 hover:bg-gold-200 hover:-translate-y-px;
   }
 
   .btn-ghost {
-    @apply btn border border-navy/20 text-navy hover:border-navy hover:bg-navy/5;
+    @apply btn border border-cream-100/20 text-cream-100 hover:border-cream-100/40 hover:bg-cream-100/5;
   }
 
   .btn-gold {
-    @apply btn bg-gold text-navy hover:bg-gold-300 hover:-translate-y-px;
+    @apply btn bg-gold text-ink-900 hover:bg-gold-200 hover:-translate-y-px;
   }
 
   .hairline {
-    @apply h-px w-full bg-navy/10;
+    @apply h-px w-full bg-cream-100/10;
+  }
+
+  .surface {
+    @apply rounded-xl border border-cream-100/10 bg-ink-700;
   }
 
   .card {
-    @apply relative overflow-hidden rounded-xl border border-navy/10 bg-cream-100/60 p-6 backdrop-blur transition-all duration-300 hover:border-navy/25 hover:bg-cream-100;
+    @apply relative overflow-hidden rounded-xl border border-cream-100/10 bg-ink-700/70 p-6 backdrop-blur transition-all duration-300 hover:border-gold/30 hover:bg-ink-700;
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-navy/15 bg-cream-50 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-navy/80;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-cream-100/15 bg-ink-600/60 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream-100/80;
   }
 
   .link-underline {
-    @apply relative inline-flex items-center gap-1 text-navy hover:text-navy-400;
+    @apply relative inline-flex items-center gap-1 text-cream-100 hover:text-gold;
   }
   .link-underline::after {
     content: '';
@@ -91,7 +99,7 @@ body {
     text-wrap: pretty;
   }
   .bg-noise {
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.055 0 0 0 0 0.122 0 0 0 0 0.251 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.949 0 0 0 0 0.925 0 0 0 0 0.863 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
   .mask-fade-r {
     -webkit-mask-image: linear-gradient(to right, black 60%, transparent);
@@ -100,5 +108,9 @@ body {
   .mask-fade-edges {
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+  .dots {
+    background-image: radial-gradient(rgba(242,236,220,0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 }

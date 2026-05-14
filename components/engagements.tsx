@@ -32,7 +32,7 @@ export function Engagements() {
       <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
         <div className="max-w-2xl">
           <p className="eyebrow eyebrow-dot">Ways to work with us</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream-100 sm:text-4xl">
             Sized to the decision in front of you.
           </h2>
         </div>
@@ -48,12 +48,12 @@ export function Engagements() {
             key={m.name}
             className={`relative flex flex-col rounded-xl border p-6 transition-all ${
               m.featured
-                ? 'border-navy bg-navy text-cream-100 shadow-xl shadow-navy/20'
-                : 'border-navy/10 bg-cream-100/60 hover:border-navy/25 hover:bg-cream-100'
+                ? 'border-gold/40 bg-ink-700 text-cream-100 shadow-glow-gold'
+                : 'border-cream-100/10 bg-ink-700/60 hover:border-cream-100/20 hover:bg-ink-700'
             }`}
           >
             {m.featured && (
-              <span className="absolute -top-2.5 left-6 inline-flex items-center gap-1 rounded-full bg-gold px-2.5 py-0.5 font-mono text-[9.5px] uppercase tracking-[0.2em] text-navy">
+              <span className="absolute -top-2.5 left-6 inline-flex items-center gap-1 rounded-full bg-gold px-2.5 py-0.5 font-mono text-[9.5px] uppercase tracking-[0.2em] text-ink-900">
                 most chosen
               </span>
             )}
@@ -61,7 +61,7 @@ export function Engagements() {
               <m.icon className={`h-4 w-4 ${m.featured ? 'text-gold' : 'text-gold-500'}`} />
               <span
                 className={`font-mono text-[10px] uppercase tracking-[0.18em] ${
-                  m.featured ? 'text-cream-100/55' : 'text-navy/55'
+                  m.featured ? 'text-cream-100/55' : 'text-cream-100/55'
                 }`}
               >
                 {m.duration}
@@ -69,21 +69,21 @@ export function Engagements() {
             </div>
             <h3
               className={`mt-5 font-display text-xl font-semibold tracking-tight ${
-                m.featured ? 'text-cream-100' : 'text-navy'
+                m.featured ? 'text-cream-100' : 'text-cream-100'
               }`}
             >
               {m.name}
             </h3>
             <p
               className={`mt-2 text-sm leading-relaxed ${
-                m.featured ? 'text-cream-100/75' : 'text-navy/70'
+                m.featured ? 'text-cream-100/75' : 'text-cream-100/70'
               }`}
             >
               {m.summary}
             </p>
             <ul
               className={`mt-5 space-y-1.5 text-sm ${
-                m.featured ? 'text-cream-100/80' : 'text-navy/75'
+                m.featured ? 'text-cream-100/80' : 'text-cream-100/75'
               }`}
             >
               {m.items.map((i) => (
@@ -91,7 +91,7 @@ export function Engagements() {
                   <span
                     aria-hidden
                     className={`mt-1.5 inline-block h-1.5 w-1.5 rounded-full ${
-                      m.featured ? 'bg-gold' : 'bg-navy/45'
+                      m.featured ? 'bg-gold' : 'bg-cream-100/35'
                     }`}
                   />
                   {i}

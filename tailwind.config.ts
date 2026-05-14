@@ -27,15 +27,24 @@ const config: Config = {
           900: '#020610',
         },
         gold: {
-          DEFAULT: '#C3A463',
+          DEFAULT: '#D2B576',
           50: '#FAF5E8',
           100: '#F1E6C5',
           200: '#E2CD90',
           300: '#D2B576',
-          400: '#C3A463',
-          500: '#A88846',
-          600: '#856A35',
-          700: '#5F4C26',
+          400: '#D2B576',
+          500: '#C3A463',
+          600: '#A88846',
+          700: '#856A35',
+        },
+        ink: {
+          DEFAULT: '#080C18',
+          900: '#04060E',
+          800: '#080C18',
+          700: '#0E1426',
+          600: '#151D34',
+          500: '#1F2848',
+          400: '#2A3866',
         },
       },
       fontFamily: {
@@ -47,12 +56,20 @@ const config: Config = {
         tightest: '-0.04em',
       },
       backgroundImage: {
-        'grid-navy':
-          'linear-gradient(to right, rgba(14,31,64,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(14,31,64,0.08) 1px, transparent 1px)',
+        'grid-ink':
+          'linear-gradient(to right, rgba(242,236,220,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(242,236,220,0.05) 1px, transparent 1px)',
         'grid-cream':
           'linear-gradient(to right, rgba(242,236,220,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(242,236,220,0.06) 1px, transparent 1px)',
+        'grid-navy':
+          'linear-gradient(to right, rgba(242,236,220,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(242,236,220,0.05) 1px, transparent 1px)',
         'radial-fade':
-          'radial-gradient(ellipse at center, rgba(195,164,99,0.18) 0%, transparent 60%)',
+          'radial-gradient(ellipse at center, rgba(210,181,118,0.20) 0%, transparent 60%)',
+        'aurora':
+          'radial-gradient(60% 50% at 20% 0%, rgba(210,181,118,0.20) 0%, transparent 60%), radial-gradient(50% 50% at 85% 30%, rgba(31,51,97,0.5) 0%, transparent 60%)',
+      },
+      boxShadow: {
+        'glow-gold': '0 0 0 1px rgba(210,181,118,0.35), 0 10px 40px -10px rgba(210,181,118,0.35)',
+        'glow-soft': '0 1px 0 0 rgba(242,236,220,0.04) inset, 0 20px 60px -20px rgba(0,0,0,0.6)',
       },
       keyframes: {
         'fade-up': {

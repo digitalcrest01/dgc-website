@@ -40,12 +40,12 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-navy/10 bg-cream-100 p-10 text-center">
+      <div className="rounded-2xl border border-cream-100/10 bg-ink-700 p-10 text-center">
         <CheckCircle2 className="mx-auto h-10 w-10 text-gold-500" />
-        <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight text-navy">
+        <h2 className="mt-5 font-display text-2xl font-semibold tracking-tight text-cream-100">
           Your mail client should be open.
         </h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-navy/70">
+        <p className="mt-3 text-[15px] leading-relaxed text-cream-100/70">
           If it did not launch, drop a note to{' '}
           <a className="link-underline" href="mailto:enquiries@digitalcrest.co.uk">
             enquiries@digitalcrest.co.uk
@@ -59,7 +59,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl border border-navy/10 bg-cream-100 p-7 lg:p-10"
+      className="rounded-2xl border border-cream-100/10 bg-ink-700 p-7 lg:p-10"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Your name" name="name" required />
@@ -79,7 +79,7 @@ export function ContactForm() {
       />
 
       <div className="mt-6 flex items-center justify-between gap-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-navy/55">
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream-100/55">
           Replies within 1 working day
         </p>
         <button type="submit" className="btn-primary" disabled={loading}>
@@ -104,7 +104,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-navy/55">
+      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream-100/55">
         {label}
         {required && <span className="text-gold"> *</span>}
       </span>
@@ -112,7 +112,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="mt-2 w-full rounded-xl border border-navy/15 bg-cream-50 px-4 py-3 text-sm text-navy outline-none transition-colors focus:border-navy focus:bg-cream-50"
+        className="mt-2 w-full rounded-xl border border-cream-100/15 bg-ink-600 px-4 py-3 text-sm text-cream-100 outline-none transition-colors focus:border-gold focus:bg-ink-600"
       />
     </label>
   );
@@ -131,12 +131,12 @@ function Select({
 }) {
   return (
     <label className={`block ${className}`}>
-      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-navy/55">
+      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream-100/55">
         {label}
       </span>
       <select
         name={name}
-        className="mt-2 w-full appearance-none rounded-xl border border-navy/15 bg-cream-50 px-4 py-3 text-sm text-navy outline-none transition-colors focus:border-navy"
+        className="mt-2 w-full appearance-none rounded-xl border border-cream-100/15 bg-ink-600 px-4 py-3 text-sm text-cream-100 outline-none transition-colors focus:border-gold"
       >
         {options.map((o) => (
           <option key={o}>{o}</option>
@@ -161,14 +161,14 @@ function Textarea({
 }) {
   return (
     <label className={`block ${className}`}>
-      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-navy/55">
+      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream-100/55">
         {label}
       </span>
       <textarea
         name={name}
         rows={rows}
         placeholder={placeholder}
-        className="mt-2 w-full resize-none rounded-xl border border-navy/15 bg-cream-50 px-4 py-3 text-sm text-navy outline-none transition-colors focus:border-navy"
+        className="mt-2 w-full resize-none rounded-xl border border-cream-100/15 bg-ink-600 px-4 py-3 text-sm text-cream-100 outline-none transition-colors focus:border-gold"
       />
     </label>
   );

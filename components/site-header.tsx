@@ -36,7 +36,7 @@ export function SiteHeader() {
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         scrolled
-          ? 'border-b border-navy/10 bg-cream-200/85 backdrop-blur-md'
+          ? 'border-b border-cream-100/10 bg-ink-900/85 backdrop-blur-md'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
@@ -56,7 +56,7 @@ export function SiteHeader() {
           >
             <Link
               href="/services"
-              className="rounded-full px-3 py-1.5 text-[13px] font-medium text-navy/80 transition-colors hover:text-navy"
+              className="rounded-full px-3 py-1.5 text-[13px] font-medium text-cream-100/80 transition-colors hover:text-cream-100"
             >
               Services
             </Link>
@@ -67,19 +67,19 @@ export function SiteHeader() {
                   : 'pointer-events-none -translate-y-1 opacity-0'
               }`}
             >
-              <div className="grid grid-cols-2 gap-1.5 rounded-xl border border-navy/10 bg-cream-50 p-2.5 shadow-xl shadow-navy/5">
+              <div className="grid grid-cols-2 gap-1.5 rounded-xl border border-cream-100/10 bg-ink-600 p-2.5 shadow-xl shadow-navy/5">
                 {services.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    className="group flex items-start gap-2.5 rounded-lg p-2.5 transition-colors hover:bg-cream-200"
+                    className="group flex items-start gap-2.5 rounded-lg p-2.5 transition-colors hover:bg-ink-900"
                   >
-                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-navy/15 bg-cream-100 text-gold">
+                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-cream-100/15 bg-ink-700 text-gold">
                       <s.icon className="h-3.5 w-3.5" />
                     </div>
                     <div>
-                      <p className="text-[13px] font-semibold text-navy">{s.shortName}</p>
-                      <p className="mt-0.5 text-[11.5px] text-navy/65">{s.tagline}</p>
+                      <p className="text-[13px] font-semibold text-cream-100">{s.shortName}</p>
+                      <p className="mt-0.5 text-[11.5px] text-cream-100/65">{s.tagline}</p>
                     </div>
                   </Link>
                 ))}
@@ -91,7 +91,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-1.5 text-[13px] font-medium text-navy/80 transition-colors hover:text-navy"
+              className="rounded-full px-3 py-1.5 text-[13px] font-medium text-cream-100/80 transition-colors hover:text-cream-100"
             >
               {item.label}
             </Link>
@@ -110,7 +110,7 @@ export function SiteHeader() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-navy/15 text-navy lg:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cream-100/15 text-cream-100 lg:hidden"
         >
           {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
         </button>
@@ -118,7 +118,7 @@ export function SiteHeader() {
 
       {open && (
         <div className="lg:hidden">
-          <div className="container-page space-y-1.5 border-t border-navy/10 bg-cream-100 py-5">
+          <div className="container-page space-y-1.5 border-t border-cream-100/10 bg-ink-700 py-5">
             <p className="eyebrow eyebrow-dot">Services</p>
             <div className="grid gap-1">
               {services.map((s) => (
@@ -126,10 +126,10 @@ export function SiteHeader() {
                   key={s.slug}
                   href={`/services/${s.slug}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-lg px-3 py-2.5 text-[13px] font-medium hover:bg-cream-200"
+                  className="flex items-center justify-between rounded-lg px-3 py-2.5 text-[13px] font-medium hover:bg-ink-900"
                 >
                   <span>{s.shortName}</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-navy/40" />
+                  <ArrowUpRight className="h-3.5 w-3.5 text-cream-100/40" />
                 </Link>
               ))}
             </div>
@@ -139,7 +139,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-[13px] font-medium hover:bg-cream-200"
+                className="block rounded-lg px-3 py-2.5 text-[13px] font-medium hover:bg-ink-900"
               >
                 {item.label}
               </Link>

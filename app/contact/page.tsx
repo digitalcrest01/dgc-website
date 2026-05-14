@@ -13,10 +13,10 @@ export default function ContactPage() {
       <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
         <div>
           <p className="eyebrow eyebrow-dot">Contact</p>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-navy text-balance sm:text-5xl">
+          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-cream-100 text-balance sm:text-5xl">
             Let us scope the right thing.
           </h1>
-          <p className="mt-4 max-w-md text-base leading-relaxed text-navy/70">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-cream-100/70">
             A 30 minute call with a senior practitioner. Clear next step, whether that is with us
             or not.
           </p>
@@ -55,11 +55,11 @@ export default function ContactPage() {
             </Item>
           </ul>
 
-          <div className="mt-10 rounded-xl border border-navy/10 bg-cream-100/60 p-5">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+          <div className="mt-10 rounded-xl border border-cream-100/10 bg-ink-700/60 p-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
               Before the call
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-navy/75">
+            <p className="mt-2 text-sm leading-relaxed text-cream-100/75">
               A short brief helps. A couple of lines on your goal and constraints is enough.
             </p>
           </div>
@@ -82,12 +82,12 @@ function Item({
 }) {
   return (
     <li className="flex items-start gap-3">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-navy/15 bg-cream-100 text-gold-500">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cream-100/15 bg-ink-700 text-gold-500">
         <Icon className="h-3.5 w-3.5" />
       </div>
       <div>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">{label}</p>
-        <p className="mt-0.5 text-sm text-navy">{children}</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">{label}</p>
+        <p className="mt-0.5 text-sm text-cream-100">{children}</p>
       </div>
     </li>
   );

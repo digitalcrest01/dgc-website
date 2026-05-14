@@ -23,12 +23,12 @@ export function TrustMarquee() {
       <div className="container-page">
         <p className="eyebrow eyebrow-dot mb-4">Frameworks and platforms</p>
       </div>
-      <div className="relative mask-fade-edges overflow-hidden border-y border-navy/10 bg-cream-100/60 py-4">
+      <div className="relative mask-fade-edges overflow-hidden border-y border-cream-100/10 bg-ink-700/60 py-4">
         <div className="flex w-max animate-marquee gap-8 px-6 will-change-transform">
           {[...badges, ...badges].map((b, i) => (
             <span
               key={`${b}-${i}`}
-              className="whitespace-nowrap font-display text-lg font-medium tracking-tight text-navy/55"
+              className="whitespace-nowrap font-display text-lg font-medium tracking-tight text-cream-100/55"
             >
               {b}
               <span aria-hidden className="ml-8 text-gold/60">

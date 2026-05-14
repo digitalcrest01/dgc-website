@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#F2ECDC',
+  themeColor: '#04060E',
   width: 'device-width',
   initialScale: 1,
 };
@@ -72,10 +72,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB" className={`${inter.variable} ${grotesk.variable} ${mono.variable}`}>
-      <body className="min-h-dvh bg-cream-200 font-sans text-navy antialiased">
+      <body className="min-h-dvh bg-ink-900 font-sans text-cream-100 antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-navy focus:px-3 focus:py-2 focus:text-cream-100"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink-700 focus:px-3 focus:py-2 focus:text-cream-100"
         >
           Skip to content
         </a>

@@ -10,20 +10,20 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: 'Senior by default',
-    body: 'Every engagement led by a practitioner with 12+ years of experience.',
+    title: 'Trust',
+    body: 'Earned by the work, not claimed in a pitch. Reasoning, evidence, and trade offs are always on the table.',
   },
   {
-    title: 'Plain English',
-    body: 'Reports your engineers, lawyers, and board can read without a translator.',
+    title: 'Integrity',
+    body: 'What we say in private, we say in public. The recommendation does not change to win the engagement.',
   },
   {
-    title: 'Long view',
-    body: 'Programmes that survive after we leave. If our absence breaks you, we failed.',
+    title: 'Customer first',
+    body: 'Your outcome is the brief, not the contract. We measure ourselves against your business.',
   },
   {
-    title: 'Quiet pride',
-    body: 'No vendor logos. No vanity case studies. The work speaks.',
+    title: 'Excellence',
+    body: 'Senior people, senior standards. Quiet, exacting craft is the only acceptable default.',
   },
 ];
 
@@ -48,26 +48,26 @@ export default function AboutPage() {
     <>
       <section className="container-page pt-14 lg:pt-20">
         <p className="eyebrow eyebrow-dot">About</p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight text-navy text-balance sm:text-5xl">
+        <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight text-cream-100 text-balance sm:text-5xl">
           A small firm with an outsized standard.
         </h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-navy/70">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream-100/70">
           Founded in 2019. Senior people on the work, clear deliverables, evidence over storytelling.
         </p>
       </section>
 
       <section className="container-page mt-16 lg:mt-20">
         <p className="eyebrow eyebrow-dot">Timeline</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
+        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
           Six years, four disciplines, one standard.
         </h2>
-        <ol className="mt-8 grid gap-px overflow-hidden rounded-xl border border-navy/10 bg-navy/10 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-8 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2 lg:grid-cols-4">
           {timeline.map((t) => (
-            <li key={t.year} className="bg-cream-100 p-5">
+            <li key={t.year} className="bg-ink-700 p-5">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
                 {t.year}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-navy/80">{t.event}</p>
+              <p className="mt-2 text-sm leading-relaxed text-cream-100/80">{t.event}</p>
             </li>
           ))}
         </ol>
@@ -75,19 +75,19 @@ export default function AboutPage() {
 
       <section className="container-page mt-16 lg:mt-20">
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
-          <div className="relative overflow-hidden rounded-2xl border border-navy/10 bg-cream-100 p-8 lg:p-10">
+          <div className="relative overflow-hidden rounded-2xl border border-cream-100/10 bg-ink-700 p-8 lg:p-10">
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-grid-navy [background-size:40px_40px] opacity-[0.08]"
+              className="pointer-events-none absolute inset-0 bg-grid-ink [background-size:40px_40px] opacity-[0.08]"
             />
             <div className="relative flex h-full flex-col justify-between">
               <Logo className="h-10 w-auto" variant="mark" />
               <div className="mt-10">
-                <p className="font-display text-lg font-medium tracking-tight text-navy sm:text-xl">
+                <p className="font-display text-lg font-medium tracking-tight text-cream-100 sm:text-xl">
                   The crest is a promise. Defence with a steady hand. Structure beneath the
                   surface. A mark of standard you can rely on.
                 </p>
-                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
                   Brand · v1
                 </p>
               </div>
@@ -95,17 +95,17 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <p className="eyebrow eyebrow-dot">Values</p>
-            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
-              How we behave on a Tuesday afternoon.
+            <p className="eyebrow eyebrow-dot">Core values</p>
+            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
+              The four lines we hold.
             </h2>
-            <ul className="mt-6 grid gap-px overflow-hidden rounded-xl border border-navy/10 bg-navy/10 sm:grid-cols-2">
+            <ul className="mt-6 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2">
               {values.map((v) => (
-                <li key={v.title} className="bg-cream-100 p-5">
-                  <h3 className="font-display text-sm font-semibold tracking-tight text-navy">
+                <li key={v.title} className="bg-ink-700 p-5">
+                  <h3 className="font-display text-base font-semibold tracking-tight text-cream-100">
                     {v.title}
                   </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-navy/70">{v.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-cream-100/70">{v.body}</p>
                 </li>
               ))}
             </ul>
@@ -115,16 +115,16 @@ export default function AboutPage() {
 
       <section className="container-page mt-16 lg:mt-20">
         <p className="eyebrow eyebrow-dot">At a glance</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
+        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
           The facts.
         </h2>
-        <dl className="mt-6 grid gap-px overflow-hidden rounded-xl border border-navy/10 bg-navy/10 sm:grid-cols-2 lg:grid-cols-3">
+        <dl className="mt-6 grid gap-px overflow-hidden rounded-xl border border-cream-100/10 bg-cream-100/10 sm:grid-cols-2 lg:grid-cols-3">
           {facts.map((f) => (
-            <div key={f.k} className="bg-cream-100 p-5">
-              <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+            <div key={f.k} className="bg-ink-700 p-5">
+              <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
                 {f.k}
               </dt>
-              <dd className="mt-1.5 font-display text-base font-semibold tracking-tight text-navy">
+              <dd className="mt-1.5 font-display text-base font-semibold tracking-tight text-cream-100">
                 {f.v}
               </dd>
             </div>

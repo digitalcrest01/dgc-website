@@ -37,19 +37,19 @@ export function Stack() {
       <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-end">
         <div className="max-w-2xl">
           <p className="eyebrow eyebrow-dot">The stack we secure</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-cream-100 sm:text-4xl">
             From the codebase to the boardroom.
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-navy/70">
+          <p className="mt-3 text-base leading-relaxed text-cream-100/70">
             One coherent view of risk across every layer your business runs on.
           </p>
         </div>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
           spec · v1.0 · 04 layers
         </p>
       </div>
 
-      <div className="mt-10 overflow-hidden rounded-2xl border border-navy/15 bg-navy text-cream-100 shadow-xl shadow-navy/15">
+      <div className="mt-10 overflow-hidden rounded-2xl border border-cream-100/15 bg-ink-700 text-cream-100 shadow-xl shadow-navy/15">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-grid-cream [background-size:48px_48px] opacity-[0.06]"
@@ -64,13 +64,13 @@ export function Stack() {
           {layers.map((l) => (
             <li
               key={l.code}
-              className="grid grid-cols-[88px_1fr] items-start gap-5 bg-navy/95 px-5 py-5 sm:grid-cols-[100px_220px_1fr] sm:items-center sm:px-6"
+              className="grid grid-cols-[88px_1fr] items-start gap-5 bg-ink-700 px-5 py-5 sm:grid-cols-[100px_220px_1fr] sm:items-center sm:px-6"
             >
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-gold">
                   {l.code}
                 </span>
-                <span aria-hidden className="hidden h-px w-6 bg-cream-100/15 sm:inline-block" />
+                <span aria-hidden className="hidden h-px w-6 bg-ink-700/15 sm:inline-block" />
               </div>
               <div className="col-start-2 flex items-center gap-3 sm:col-start-2">
                 <l.icon className="h-4 w-4 text-gold/90" />
@@ -86,7 +86,7 @@ export function Stack() {
                 {l.tags.map((t) => (
                   <span
                     key={t}
-                    className="inline-flex items-center rounded-full border border-cream-100/15 bg-cream-100/[0.04] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream-100/75"
+                    className="inline-flex items-center rounded-full border border-cream-100/15 bg-ink-700/[0.04] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream-100/75"
                   >
                     {t}
                   </span>
@@ -101,7 +101,7 @@ export function Stack() {
             ['Integration', 'pipeline native'],
             ['Assurance', 'continuous'],
           ].map(([k, v]) => (
-            <div key={k} className="bg-navy/95 px-5 py-3">
+            <div key={k} className="bg-ink-700 px-5 py-3">
               <p className="font-mono text-[9.5px] uppercase tracking-[0.22em] text-cream-100/45">
                 {k}
               </p>

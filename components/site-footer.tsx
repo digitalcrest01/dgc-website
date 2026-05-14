@@ -7,7 +7,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-20 border-t border-navy/10 bg-navy text-cream-100">
+    <footer className="relative mt-20 border-t border-cream-100/10 bg-ink-700 text-cream-100">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-grid-cream [background-size:48px_48px] opacity-[0.07]"
@@ -31,7 +31,7 @@ export function SiteFooter() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a
               href="mailto:enquiries@digitalcrest.co.uk"
-              className="inline-flex items-center gap-1.5 rounded-full border border-cream-100/20 px-3 py-1.5 text-[11px] text-cream-100/90 transition-colors hover:bg-cream-100/10"
+              className="inline-flex items-center gap-1.5 rounded-full border border-cream-100/20 px-3 py-1.5 text-[11px] text-cream-100/90 transition-colors hover:bg-ink-700/10"
             >
               <Mail className="h-3 w-3" /> enquiries@digitalcrest.co.uk
             </a>
@@ -39,7 +39,7 @@ export function SiteFooter() {
               href="https://www.linkedin.com/company/digitalcrestconsulting"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-cream-100/20 px-3 py-1.5 text-[11px] text-cream-100/90 transition-colors hover:bg-cream-100/10"
+              className="inline-flex items-center gap-1.5 rounded-full border border-cream-100/20 px-3 py-1.5 text-[11px] text-cream-100/90 transition-colors hover:bg-ink-700/10"
             >
               <Linkedin className="h-3 w-3" /> LinkedIn
             </a>

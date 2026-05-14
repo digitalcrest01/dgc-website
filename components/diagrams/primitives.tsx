@@ -21,21 +21,36 @@ export function DiagramShell({
   children: ReactNode;
 }) {
   return (
-    <figure className="overflow-hidden rounded-2xl border border-navy/15 bg-cream-100">
-      <header className="flex items-center justify-between border-b border-navy/10 px-5 py-3">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+    <figure
+      className="overflow-hidden rounded-2xl shadow-glow-soft"
+      style={{ background: '#F7F2E5', border: '1px solid rgba(210,181,118,0.35)' }}
+    >
+      <header
+        className="flex items-center justify-between px-5 py-3"
+        style={{ borderBottom: '1px solid rgba(14,31,64,0.12)' }}
+      >
+        <p
+          className="font-mono text-[10px] uppercase tracking-[0.22em]"
+          style={{ color: 'rgba(14,31,64,0.6)' }}
+        >
           {title}
         </p>
-        {caption ? (
-          <p className="font-mono text-[10px] text-navy/45">{caption}</p>
-        ) : (
-          <p className="font-mono text-[10px] text-navy/45">architecture · v1</p>
-        )}
+        <p
+          className="font-mono text-[10px]"
+          style={{ color: 'rgba(14,31,64,0.45)' }}
+        >
+          {caption ?? 'architecture · v1'}
+        </p>
       </header>
       <div className="relative">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-grid-navy [background-size:32px_32px] opacity-[0.07]"
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(14,31,64,0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(14,31,64,0.4) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
         />
         <svg
           viewBox={viewBox}

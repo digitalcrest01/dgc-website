@@ -30,7 +30,7 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
       <section className="container-page pt-14 lg:pt-20">
         <Link
           href="/research"
-          className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-navy/55 hover:text-navy"
+          className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/55 hover:text-cream-100"
         >
           <ArrowLeft className="h-3 w-3" /> Research Lab
         </Link>
@@ -38,19 +38,19 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <span className="chip">{post.cloud}</span>
           <span className="chip">{post.useCase}</span>
-          <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-navy/55">
+          <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-cream-100/55">
             <Clock className="h-3 w-3" />
             {post.readTime}
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/45">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/45">
             published · {post.published}
           </span>
         </div>
 
-        <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold tracking-tight text-navy text-balance sm:text-4xl lg:text-5xl">
+        <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold tracking-tight text-cream-100 text-balance sm:text-4xl lg:text-5xl">
           {post.title}
         </h1>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-navy/75">{post.summary}</p>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-cream-100/75">{post.summary}</p>
       </section>
 
       <section className="container-page mt-10 lg:mt-14">
@@ -62,10 +62,10 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
           <article className="space-y-10">
             {post.sections.map((s) => (
               <div key={s.heading}>
-                <h2 className="font-display text-xl font-semibold tracking-tight text-navy sm:text-2xl">
+                <h2 className="font-display text-xl font-semibold tracking-tight text-cream-100 sm:text-2xl">
                   {s.heading}
                 </h2>
-                <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-navy/80">
+                <div className="mt-4 space-y-4 text-[15px] leading-relaxed text-cream-100/80">
                   {s.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
@@ -75,7 +75,7 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
                     {s.list.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-3 rounded-lg border border-navy/10 bg-cream-100/60 p-3 font-mono text-[12px] leading-relaxed text-navy/85"
+                        className="flex items-start gap-3 rounded-lg border border-cream-100/10 bg-ink-700/60 p-3 font-mono text-[12px] leading-relaxed text-cream-100/85"
                       >
                         <span
                           aria-hidden
@@ -89,7 +89,7 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
               </div>
             ))}
 
-            <div className="rounded-2xl border border-navy/10 bg-navy p-6 text-cream-100 sm:p-8">
+            <div className="rounded-2xl border border-cream-100/10 bg-ink-700 p-6 text-cream-100 sm:p-8">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold">
                 Takeaway
               </p>
@@ -100,13 +100,13 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
           </article>
 
           <aside className="space-y-5 lg:sticky lg:top-24 lg:self-start">
-            <div className="rounded-xl border border-navy/10 bg-cream-100 p-5">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+            <div className="rounded-xl border border-cream-100/10 bg-ink-700 p-5">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
                 Controls satisfied
               </p>
               <ul className="mt-3 space-y-2">
                 {post.controls.map((c) => (
-                  <li key={c} className="flex items-start gap-2 text-sm text-navy/80">
+                  <li key={c} className="flex items-start gap-2 text-sm text-cream-100/80">
                     <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-500" />
                     <span>{c}</span>
                   </li>
@@ -114,11 +114,11 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
               </ul>
             </div>
 
-            <div className="rounded-xl border border-navy/10 bg-cream-100 p-5">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-navy/55">
+            <div className="rounded-xl border border-cream-100/10 bg-ink-700 p-5">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-cream-100/55">
                 Need this in your stack?
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-navy/70">
+              <p className="mt-2 text-sm leading-relaxed text-cream-100/70">
                 Our engineers can pattern this into your environment in a sprint.
               </p>
               <Link href="/contact" className="btn-primary mt-4 w-full justify-center">
@@ -132,7 +132,7 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
 
       <section className="container-page mt-20 lg:mt-24">
         <p className="eyebrow eyebrow-dot">More from the lab</p>
-        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-navy sm:text-3xl">
+        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-cream-100 sm:text-3xl">
           Related research.
         </h2>
         <div className="mt-6 grid gap-3 md:grid-cols-3">
@@ -144,12 +144,12 @@ export default function ResearchPostPage({ params }: { params: { slug: string } 
             >
               <div className="flex items-center justify-between">
                 <span className="chip">{o.cloud}</span>
-                <ArrowUpRight className="h-4 w-4 text-navy/40 group-hover:text-navy" />
+                <ArrowUpRight className="h-4 w-4 text-cream-100/40 group-hover:text-cream-100" />
               </div>
-              <h3 className="mt-3 font-display text-base font-semibold tracking-tight text-navy">
+              <h3 className="mt-3 font-display text-base font-semibold tracking-tight text-cream-100">
                 {o.title}
               </h3>
-              <p className="mt-1.5 text-xs text-navy/65">{o.useCase}</p>
+              <p className="mt-1.5 text-xs text-cream-100/65">{o.useCase}</p>
             </Link>
           ))}
         </div>
