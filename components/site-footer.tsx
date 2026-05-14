@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight, Mail, MapPin, Linkedin } from 'lucide-react';
 import { Logo } from './logo';
 import { services } from '@/lib/services';
+import { CookiePreferencesButton } from './cookie-preferences-button';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -80,16 +81,20 @@ export function SiteFooter() {
           <p>
             © {year} Digital Crest Consulting Ltd. Registered in England and Wales.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <Link href="/privacy" className="hover:text-cream-100">
               Privacy
             </Link>
             <Link href="/cookies" className="hover:text-cream-100">
               Cookies
             </Link>
-            <Link href="/terms" className="hover:text-cream-100">
-              Terms
+            <Link href="/data-collection" className="hover:text-cream-100">
+              Data collection
             </Link>
+            <Link href="/terms" className="hover:text-cream-100">
+              Terms of use
+            </Link>
+            <CookiePreferencesButton className="hover:text-cream-100" />
             <span className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-cream-100/40">
               v1.0
             </span>
